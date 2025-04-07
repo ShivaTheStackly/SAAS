@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Stackly</title>
+  <link rel="icon" type="image/png" href="s" />
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/> 
+</head>
+<body>
+   <!-- Top Info Bar -->
+  <div class="topbar">
+    <div class="container">
+      <div class="left">
+        <span>info@gentech.com</span>
+        <span>+888 777 660 55</span>
+      </div>
+      <div class="right">
+        <span>Follows:</span>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Header -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <a href="#"><img src="logo-stackly (1).png" alt="Gentech Logo" /></a>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#" class="active">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Pages +</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="login-btn">Login</a>
+    </div>
+  </header>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Confidently plan,<br>design and build<br>for tomorrow</h1>
+      <p>
+        Get your digital transformation done right by empowering your people,<br>
+        designing efficient processes and choosing the right technology.
+      </p>
+      <a href="#" class="btn">OUR SERVICES</a>
+    </div>
+    <div class="hero-image">
+      <img src="https://wpdemo.zcubethemes.com/gentech/wp-content/uploads/2023/08/slider-img.png" alt="Happy man with tablet" />
+      <img src="https://wpdemo.zcubethemes.com/gentech/wp-content/uploads/2023/08/slider-ani-01.png" class="star" alt="Star graphic" />
+    </div>
+  </section>
+</body>
+</html>
+<style>* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .topbar {
+  background: transparent;
+  color: white;
+  font-size: 14px;
+  padding: 10px 0;
+}
+
+.topbar .container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+}
+
+.topbar .left span {
+  margin-right: 20px;
+}
+
+.topbar .right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.topbar .right a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* Header Nav */
+header {
+  background: white;
+  padding: 30px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  margin: 40px;
+}
+
+header .container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+}
+
+.logo img {
+  height: 40px;
+  display: block;
+}
+
+/* Nav Links */
+nav ul.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+nav ul li a {
+  position: relative;
+  text-decoration: none;
+  font-weight: 600;
+  color: #111827;
+  padding: 4px 0;
+  transition: color 0.3s ease;
+}
+
+nav ul li a.active {
+  color: #00aaff;
+}
+
+nav ul li a:hover {
+  color: #00aaff;
+}
+
+/* Underline on hover */
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background-color: #00aaff;
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* Login Button */
+.login-btn {
+  padding: 10px 22px;
+  background: linear-gradient(to right, #00cfff, #2f80ed);
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 191, 255, 0.3);
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  opacity: 0.9;
+}
+  body {
+    font-family: 'Arial', sans-serif;
+    color: white;
+    background: linear-gradient(to right, #1C2A1E, #AA96E0, #AA96E0);
+  }
+  
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 30px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .hero-content {
+    max-width: 600px;
+  }
+  
+  .hero-content h1 {
+    font-size: 56px;
+    margin-bottom: 30px;
+    font-weight: 800;
+  }
+  
+  .hero-content p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+  }
+  
+  .btn {
+    background-color: #e6f72e;
+    color: black;
+    padding: 14px 24px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+  }
+  
+  .hero-image {
+    position: relative;
+  }
+  
+  .hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .star {
+    position: absolute;
+    top: -40px;
+    left: 60px;
+    width: 120px;
+  }
+  </style>
