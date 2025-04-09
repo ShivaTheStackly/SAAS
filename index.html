@@ -4,14 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>The Stackly</title>
+    <link rel="icon" href="stackly_icon-removebg-preview.png" type="image/png" />
   <link rel="icon" type="image/png" href="s" />
   <link rel="stylesheet" href="styles.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/> 
 </head>
 <body>
+  <!-- Loader Section -->
+<div id="loader">
+  <img src="logo-stackly (1).png" alt="Loading..." />
+</div>
+
    <!-- Top Info Bar -->
    <div class="logo">
-    <img src="your-logo.png" alt="Logo">
+    <img src="stackly_icon-removebg-preview.png" alt="Logo">
     <div class="nav-toggle" onclick="toggleNav()">☰</div>
   </div>
   
@@ -39,18 +45,26 @@
       </div>
       <nav>
         <ul class="nav-links">
-          <li><a href="#" class="active">Home</a></li>
-          <li><a href="#" class="active">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Team</a></li>
-          <li><a href="#">Pricing</a></li>
-          <li><a href="#">Blog</a></li>
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#price">Pricing</a></li>
+          <li><a href="#blog">Blog</a></li>
           <li><a href="#">Pages +</a></li>
+            <ul class="dropdown-menu">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#price">Pricing</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#team">Team</a></li>
+              <li><a href="#blog">Blog</a></li>
         </ul>
       </nav>
       <a href="#" class="login-btn">Login</a>
     </div>
   </header>
+  <section id="home">
   <section class="hero">
     <div class="hero-content">
       <h1>Confidently plan,<br>design and build<br>for tomorrow</h1>
@@ -58,23 +72,24 @@
         Get your digital transformation done right by empowering your people,<br>
         designing efficient processes and choosing the right technology.
       </p>
-      <a href="#" class="btn">OUR SERVICES</a>
+      <a href="#services" class="btn">OUR SERVICES</a>
     </div>
     <div class="hero-image">
       <img src="https://wpdemo.zcubethemes.com/gentech/wp-content/uploads/2023/08/slider-img.png" alt="Happy man with tablet" />
       <img src="https://wpdemo.zcubethemes.com/gentech/wp-content/uploads/2023/08/slider-ani-01.png" class="star" alt="Star graphic" />
-    </div>
-  </section>
+    </div></section>
 
-  <div class="wrapper">
-    
+  <section id="about">  <div class="wrapper">
+  
     <!-- Mission Card -->
     <div class="card">
-    
       <img src="vision-img.png" alt="Mission Image">
       <div class="card-content">
         <h2>Our Mission</h2>
-        <p>To empower businesses with intuitive and scalable cloud solutions. We believe in flexibility, innovation, and customer-centric digital experiences.</p> 
+        <p>
+          To empower businesses with intuitive and scalable cloud solutions.
+          We believe in flexibility, innovation, and customer-centric digital experiences.
+        </p>
       </div>
     </div>
 
@@ -83,30 +98,37 @@
       <img src="mission-img.png" alt="Vision Image">
       <div class="card-content">
         <h2>Our Vision</h2>
-        <p>To be the leading SaaS provider transforming the way teams collaborate, automate, and grow—globally and seamlessly.</p>
+        <p>
+          To be the leading SaaS provider transforming the way teams collaborate, automate,
+          and grow—globally and seamlessly.
+        </p>
       </div>
     </div>
+
   </div>
+
   <div class="section">
     <small>SINCE FROM 2000</small>
     <h1>
-      We Build Modern, Scalable Software
+      We Build Modern, Scalable Software<br>
       Empowering Innovation with High-Performance Solutions
     </h1>
 
     <div class="contact-info">
       <div>
-        SUPPORT EMAIL
+        SUPPORT EMAIL<br>
         <span>thestackly@gmail.com</span>
       </div>
       <div class="divider"></div>
       <div>
-        PHONE NUMBER
+        PHONE NUMBER<br>
         <span>+888 777 666 00</span>
       </div>
     </div>
   </div>
-  <section class="section">
+</section>
+  
+  <section id="services"><section class="section">
     <div style="color: #000000; font-size: 2em; font-weight: bold; letter-spacing: 1px;">Our Services</div>
     <h1>Our Exciting feature And Service</h1>
     <div class="solutions">
@@ -140,112 +162,112 @@
         <div class="solution-text">Edit your work and preview the changes on the screen live with page builder.</div>
      
       </div>
-    </div>
-  </section>
-  <div class="team-section">
-    <!-- Text Section -->
-    <div class="team-text">
-      <img src="https://cdn-icons-png.flaticon.com/512/681/681494.png" style="width: 60px; filter: brightness(0) saturate(100%) invert(41%) sepia(26%) saturate(745%) hue-rotate(202deg) brightness(93%) contrast(93%); margin-bottom: 20px;" />
-      <h2>Meet Our Expert Team Member Will Ready For Your Service</h2>
-      <p>Leverage agile frameworks to provide a robust synopsis for high level</p>
-      <div class="nav-buttons">
-        <button onclick="prevSlide()">&larr;</button>
-        <button onclick="nextSlide()">&rarr;</button>
-      </div>
-    </div>
-  
-    <!-- Carousel Section -->
-    <div class="carousel-wrapper">
-      <div class="carousel" id="carousel">
-        <!-- Profile Cards -->
-        <div class="member-card">
-          <img src="profile.jpg" alt="Tom Roadse" />
-          <div class="member-info">
-            <p>Manager</p>
-            <h3>Tom Roadse</h3>
-            <div class="social-icons">
-              <a href="#" class="fb">f</a>
-              <a href="#" class="tw">t</a>
-              <a href="#" class="gp">G+</a>
-              <a href="#" class="in">in</a>
-            </div>
-          </div>
-        </div>
-  
-        <div class="member-card">
-          <img src="profile 2.jpg" alt="Lana Dior" />
-          <div class="member-info">
-            <p>Manager</p>
-            <h3>Lana Dior</h3>
-            <div class="social-icons">
-              <a href="#" class="fb">f</a>
-              <a href="#" class="tw">t</a>
-              <a href="#" class="gp">G+</a>
-              <a href="#" class="in">in</a>
-            </div>
-          </div>
-        </div>
-  
-        <div class="member-card">
-          <img src="profile 3.jpg" alt="John Steve" />
-          <div class="member-info">
-            <p>Developer</p>
-            <h3>John Steve</h3>
-            <div class="social-icons">
-              <a href="#" class="fb">f</a>
-              <a href="#" class="tw">t</a>
-              <a href="#" class="gp">G+</a>
-              <a href="#" class="in">in</a>
-            </div>
-          </div>
-        </div>
-  
-        <div class="member-card">
-          <img src="profile.jpg" alt="Sofia Lin" />
-          <div class="member-info">
-            <p>Designer</p>
-            <h3>Sofia Lin</h3>
-            <div class="social-icons">
-              <a href="#" class="fb">f</a>
-              <a href="#" class="tw">t</a>
-              <a href="#" class="gp">G+</a>
-              <a href="#" class="in">in</a>
-            </div>
-          </div>
-        </div>
-  
-        <div class="member-card">
-          <img src="profile 2.jpg" alt="Alex Roe" />
-          <div class="member-info">
-            <p>Analyst</p>
-            <h3>Alex Roe</h3>
-            <div class="social-icons">
-              <a href="#" class="fb">f</a>
-              <a href="#" class="tw">t</a>
-              <a href="#" class="gp">G+</a>
-              <a href="#" class="in">in</a>
-            </div>
-          </div>
-        </div>
-  
-        <div class="member-card">
-          <img src="profile 3.jpg" alt="Eva Brooks" />
-          <div class="member-info">
-            <p>Support</p>
-            <h3>Eva Brooks</h3>
-            <div class="social-icons">
-              <a href="#" class="fb">f</a>
-              <a href="#" class="tw">t</a>
-              <a href="#" class="gp">G+</a>
-              <a href="#" class="in">in</a>
-            </div>
-          </div>
-        </div>
-  
-      </div>
+    </div></section>
+<section id="team"> <div class="team-section">
+  <!-- Text Section -->
+  <div class="team-text">
+    <img src="https://cdn-icons-png.flaticon.com/512/681/681494.png" style="width: 60px; filter: brightness(0) saturate(100%) invert(41%) sepia(26%) saturate(745%) hue-rotate(202deg) brightness(93%) contrast(93%); margin-bottom: 20px;" />
+    <h2>Meet Our Expert Team Member Will Ready For Your Service</h2>
+    <p>Leverage agile frameworks to provide a robust synopsis for high level</p>
+    <div class="nav-buttons">
+      <button onclick="prevSlide()">&larr;</button>
+      <button onclick="nextSlide()">&rarr;</button>
     </div>
   </div>
-  <h1>Choose Affordable Prices</h1>
+
+  <!-- Carousel Section -->
+  <div class="carousel-wrapper">
+    <div class="carousel" id="carousel">
+      <!-- Profile Cards -->
+      <div class="member-card">
+        <img src="profile.jpg" alt="Tom Roadse" />
+        <div class="member-info">
+          <p>Manager</p>
+          <h3>Tom Roadse</h3>
+          <div class="social-icons">
+            <a href="#" class="fb">f</a>
+            <a href="#" class="tw">t</a>
+            <a href="#" class="gp">G+</a>
+            <a href="#" class="in">in</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="member-card">
+        <img src="profile 2.jpg" alt="Lana Dior" />
+        <div class="member-info">
+          <p>Manager</p>
+          <h3>Lana Dior</h3>
+          <div class="social-icons">
+            <a href="#" class="fb">f</a>
+            <a href="#" class="tw">t</a>
+            <a href="#" class="gp">G+</a>
+            <a href="#" class="in">in</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="member-card">
+        <img src="profile 3.jpg" alt="John Steve" />
+        <div class="member-info">
+          <p>Developer</p>
+          <h3>John Steve</h3>
+          <div class="social-icons">
+            <a href="#" class="fb">f</a>
+            <a href="#" class="tw">t</a>
+            <a href="#" class="gp">G+</a>
+            <a href="#" class="in">in</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="member-card">
+        <img src="profile.jpg" alt="Sofia Lin" />
+        <div class="member-info">
+          <p>Designer</p>
+          <h3>Sofia Lin</h3>
+          <div class="social-icons">
+            <a href="#" class="fb">f</a>
+            <a href="#" class="tw">t</a>
+            <a href="#" class="gp">G+</a>
+            <a href="#" class="in">in</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="member-card">
+        <img src="profile 2.jpg" alt="Alex Roe" />
+        <div class="member-info">
+          <p>Analyst</p>
+          <h3>Alex Roe</h3>
+          <div class="social-icons">
+            <a href="#" class="fb">f</a>
+            <a href="#" class="tw">t</a>
+            <a href="#" class="gp">G+</a>
+            <a href="#" class="in">in</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="member-card">
+        <img src="profile 3.jpg" alt="Eva Brooks" />
+        <div class="member-info">
+          <p>Support</p>
+          <h3>Eva Brooks</h3>
+          <div class="social-icons">
+            <a href="#" class="fb">f</a>
+            <a href="#" class="tw">t</a>
+            <a href="#" class="gp">G+</a>
+            <a href="#" class="in">in</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div></section>
+  
+ <section id="price"> <h1>Choose Affordable Prices</h1>
   <p class="subtitle">
     Softino Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
   </p>
@@ -299,63 +321,65 @@
   </div>
   <section style="padding: 60px 20px; text-align: center;">
     <div>
-      <h2 style="font-size: 36px; font-weight: bold; color: #ffffff;">Creative Blogs</h2>
-      <p style="color: #eae8e8; font-size: 16px; max-width: 700px; margin: auto;">
-        Softino Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit
+
+    </section>
+ <section id="blog"><h2 style="font-size: 36px; font-weight: bold; color: #ffffff;text-align: center;">Creative Blogs</h2>
+  <p style="color: #eae8e8; font-size: 16px; max-width: 700px; margin: auto;">
+    Softino Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit
+  </p>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; justify-content: center; margin-top: 40px; gap: 20px;">
+  <!-- Blog Card 1 -->
+  <div style="width: 300px; background: #fff; box-shadow: 0 0 15px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+    <div style="position: relative;">
+      <img src="blog.jpg" alt="Blog Image 1" style="width: 100%; height: 200px; object-fit: cover;">
+      <span style="position: absolute; bottom: 10px; left: 10px; background: #00bfff; color: #fff; font-size: 13px; padding: 5px 10px; border-radius: 3px;">PHOTO</span>
+    </div>
+    <div style="padding: 15px; text-align: left;">
+      <p style="font-size: 14px; color: #888;">
+        📅 23 Jan, 2019 &nbsp;&nbsp;&nbsp; 👤 By ThemeHt
       </p>
+      <h3 style="font-size: 20px; color: #1c1c3c; font-weight: bold; border-top: 2px solid #00bfff; padding-top: 10px;">
+        StacklyPerformance Based Software
+      </h3>
     </div>
-  
-    <div style="display: flex; flex-wrap: wrap; justify-content: center; margin-top: 40px; gap: 20px;">
-      <!-- Blog Card 1 -->
-      <div style="width: 300px; background: #fff; box-shadow: 0 0 15px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
-        <div style="position: relative;">
-          <img src="blog.jpg" alt="Blog Image 1" style="width: 100%; height: 200px; object-fit: cover;">
-          <span style="position: absolute; bottom: 10px; left: 10px; background: #00bfff; color: #fff; font-size: 13px; padding: 5px 10px; border-radius: 3px;">PHOTO</span>
-        </div>
-        <div style="padding: 15px; text-align: left;">
-          <p style="font-size: 14px; color: #888;">
-            📅 23 Jan, 2019 &nbsp;&nbsp;&nbsp; 👤 By ThemeHt
-          </p>
-          <h3 style="font-size: 20px; color: #1c1c3c; font-weight: bold; border-top: 2px solid #00bfff; padding-top: 10px;">
-            Softino Performance Based Software
-          </h3>
-        </div>
-      </div>
-  
-      <!-- Blog Card 2 -->
-      <div style="width: 300px; background: #fff; box-shadow: 0 0 15px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
-        <div style="position: relative;">
-          <img src="blog 2.jpg" alt="Blog Image 2" style="width: 100%; height: 200px; object-fit: cover;">
-          <span style="position: absolute; bottom: 10px; left: 10px; background: #1c1c3c; color: #fff; font-size: 13px; padding: 5px 10px; border-radius: 3px;">PHOTO</span>
-        </div>
-        <div style="padding: 15px; text-align: left;">
-          <p style="font-size: 14px; color: #888;">
-            📅 23 Jan, 2019 &nbsp;&nbsp;&nbsp; 👤 By ThemeHt
-          </p>
-          <h3 style="font-size: 20px; color: #1c1c3c; font-weight: bold; border-top: 2px solid #00bfff; padding-top: 10px;">
-            Latest Software Design In Features
-          </h3>
-        </div>
-      </div>
-  
-      <!-- Blog Card 3 -->
-      <div style="width: 300px; background: #fff; box-shadow: 0 0 15px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
-        <div style="position: relative;">
-          <img src="blog 3.jpg" alt="Blog Image 3" style="width: 100%; height: 200px; object-fit: cover;">
-          <span style="position: absolute; bottom: 10px; left: 10px; background: #00bfff; color: #fff; font-size: 13px; padding: 5px 10px; border-radius: 3px;">PHOTO</span>
-        </div>
-        <div style="padding: 15px; text-align: left;">
-          <p style="font-size: 14px; color: #888;">
-            📅 23 Jan, 2019 &nbsp;&nbsp;&nbsp; 👤 By ThemeHt
-          </p>
-          <h3 style="font-size: 20px; color: #1c1c3c; font-weight: bold; border-top: 2px solid #00bfff; padding-top: 10px;">
-            All Powerful Design Feature In Softino
-          </h3>
-        </div>
-      </div>
+  </div>
+
+  <!-- Blog Card 2 -->
+  <div style="width: 300px; background: #fff; box-shadow: 0 0 15px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+    <div style="position: relative;">
+      <img src="blog 2.jpg" alt="Blog Image 2" style="width: 100%; height: 200px; object-fit: cover;">
+      <span style="position: absolute; bottom: 10px; left: 10px; background: #1c1c3c; color: #fff; font-size: 13px; padding: 5px 10px; border-radius: 3px;">PHOTO</span>
     </div>
-  </section>
+    <div style="padding: 15px; text-align: left;">
+      <p style="font-size: 14px; color: #888;">
+        📅 23 Jan, 2019 &nbsp;&nbsp;&nbsp; 👤 By ThemeHt
+      </p>
+      <h3 style="font-size: 20px; color: #1c1c3c; font-weight: bold; border-top: 2px solid #00bfff; padding-top: 10px;">
+        Latest Software Design In Features
+      </h3>
+    </div>
+  </div>
+
+  <!-- Blog Card 3 -->
+  <div style="width: 300px; background: #fff; box-shadow: 0 0 15px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+    <div style="position: relative;">
+      <img src="blog 3.jpg" alt="Blog Image 3" style="width: 100%; height: 200px; object-fit: cover;">
+      <span style="position: absolute; bottom: 10px; left: 10px; background: #00bfff; color: #fff; font-size: 13px; padding: 5px 10px; border-radius: 3px;">PHOTO</span>
+    </div>
+    <div style="padding: 15px; text-align: left;">
+      <p style="font-size: 14px; color: #888;">
+        📅 23 Jan, 2019 &nbsp;&nbsp;&nbsp; 👤 By ThemeHt
+      </p>
+      <h3 style="font-size: 20px; color: #1c1c3c; font-weight: bold; border-top: 2px solid #00bfff; padding-top: 10px;">
+        All Powerful Design Feature In Softino
+      </h3>
+    </div>
+  </div>
+</div></section>
+  
   
   <footer style="background-color: #f8f9ff; padding: 60px 0; font-family: 'Arial', sans-serif;">
     <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between;">
@@ -414,14 +438,56 @@
   
   <!-- FontAwesome for Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  
+ 
 </body>
 </html>
-<style>* {
+<style>
+  /* Loader styles */
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #0d0d0d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  transition: opacity 16s ease, visibility 6s ease;
+}
+
+#loader img {
+  width: 120px;
+  animation: pop 1.5s ease-in-out infinite;
+}
+
+@keyframes pop {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.6;
+  }
+}
+
+/* Hide loader after loading */
+#loader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
+  
   .topbar {
   background: transparent;
   color: white;
@@ -515,7 +581,23 @@ nav ul li a::after {
 nav ul li a:hover::after {
   width: 100%;
 }
+/* Dropdown styles */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #1a1a1a;
+  display: none;
+  flex-direction: column;
+  min-width: 150px;
+  padding: 0.5rem 0;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
 
+.dropdown-menu li {
+  padding: 0.5rem 1rem;
+}
 /* Login Button */
 .login-btn {
   padding: 10px 22px;
@@ -978,6 +1060,7 @@ nav ul li a:hover::after {
       max-width: 1600px;
       margin: 0 auto;
       background-color: #FDF5EF;
+      margin-bottom: 40px;
     }
     .team-text {
       max-width: 400px;
@@ -1084,6 +1167,7 @@ nav ul li a:hover::after {
       font-size: 32px;
       font-weight: 700;
       text-align: center;
+
     }
     p.subtitle {
       color: #d3d1d1;
@@ -1346,6 +1430,7 @@ footer {
   padding: 60px 20px;
   font-family: 'Arial', sans-serif;
   color: #333;
+  margin-top: 40px;
 }
 
 footer .footer-container {
@@ -1476,6 +1561,11 @@ footer a:hover {
 
   </style>
   <script>
+    function toggleNav() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('show');
+  }
+
     const carousel = document.getElementById('carousel');
     const cardWidth = 280; // including margin
     const totalCards = 6;
@@ -1500,10 +1590,10 @@ footer a:hover {
         updateCarousel();
       }
     }
-   
-  function toggleNav() {
-    const navLinks = document.querySelector('.nav-links');
-    navLinks.classList.toggle('show');
-  }
+    window.addEventListener("load", () => {
+    const loader = document.getElementById("loader");
+    loader.classList.add("hidden");
+  });
+  
 </script>
 
