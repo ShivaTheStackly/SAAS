@@ -15,27 +15,11 @@
   <img src="logo-stackly (1).png" alt="Loading..." />
 </div>
 
-   <!-- Top Info Bar -->
-   <div class="logo">
-    <img src="stackly_icon-removebg-preview.png" alt="Logo">
-    <div class="nav-toggle" onclick="toggleNav()">☰</div>
-  </div>
-  
-  <div class="topbar">
-    <div class="container">
-      <div class="left">
-        <span>info@gentech.com</span>
-        <span>+888 777 660 55</span>
-      </div>
-      <div class="right">
-        <span>Follows:</span>
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-youtube"></i></a>
-      </div>
-    </div>
-  </div>
+<div class="mobile-header">
+  <img src="logo-stackly (1).png" alt="Logo" class="logo">
+  <div class="nav-toggle" onclick="toggleNav()">☰</div>
+</div>
+ 
 
   <!-- Main Header -->
   <header>
@@ -46,19 +30,11 @@
       <nav>
         <ul class="nav-links">
           <li><a href="#home" class="active">Home</a></li>
-          <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
           <li><a href="#team">Team</a></li>
           <li><a href="#price">Pricing</a></li>
           <li><a href="#blog">Blog</a></li>
-          <li><a href="#">Pages +</a></li>
-            <ul class="dropdown-menu">
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#price">Pricing</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#team">Team</a></li>
-              <li><a href="#blog">Blog</a></li>
         </ul>
       </nav>
       <a href="#" class="login-btn">Login</a>
@@ -79,33 +55,7 @@
       <img src="https://wpdemo.zcubethemes.com/gentech/wp-content/uploads/2023/08/slider-ani-01.png" class="star" alt="Star graphic" />
     </div></section>
 
-  <section id="about">  <div class="wrapper">
-  
-    <!-- Mission Card -->
-    <div class="card">
-      <img src="vision-img.png" alt="Mission Image">
-      <div class="card-content">
-        <h2>Our Mission</h2>
-        <p>
-          To empower businesses with intuitive and scalable cloud solutions.
-          We believe in flexibility, innovation, and customer-centric digital experiences.
-        </p>
-      </div>
-    </div>
-
-    <!-- Vision Card -->
-    <div class="card">
-      <img src="mission-img.png" alt="Vision Image">
-      <div class="card-content">
-        <h2>Our Vision</h2>
-        <p>
-          To be the leading SaaS provider transforming the way teams collaborate, automate,
-          and grow—globally and seamlessly.
-        </p>
-      </div>
-    </div>
-
-  </div>
+  <section id="about">  
 
   <div class="section">
     <small>SINCE FROM 2000</small>
@@ -161,6 +111,32 @@
         <div class="solution-title">VHelping Support</div>
         <div class="solution-text">Edit your work and preview the changes on the screen live with page builder.</div>
      
+      </div>
+    </div>
+    <div class="wrapper">
+  
+      <!-- Mission Card -->
+      <div class="card">
+        <img src="vision-img.png" alt="Mission Image">
+        <div class="card-content">
+          <h2>Our Mission</h2>
+          <p>
+            To empower businesses with intuitive and scalable cloud solutions.
+            We believe in flexibility, innovation, and customer-centric digital experiences.
+          </p>
+        </div>
+      </div>
+  
+      <!-- Vision Card -->
+      <div class="card">
+        <img src="mission-img.png" alt="Vision Image">
+        <div class="card-content">
+          <h2>Our Vision</h2>
+          <p>
+            To be the leading SaaS provider transforming the way teams collaborate, automate,
+            and grow—globally and seamlessly.
+          </p>
+        </div>
       </div>
     </div></section>
 <section id="team"> <div class="team-section">
@@ -442,6 +418,29 @@
 </body>
 </html>
 <style>
+  /* Hide by default */
+.mobile-header {
+  display: none;
+}
+
+/* Show only on mobile view (screen width 768px or less) */
+@media (max-width: 768px) {
+  .mobile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .logo {
+    height: 40px; /* adjust as needed */
+  }
+
+  .nav-toggle {
+    font-size: 24px;
+    cursor: pointer;
+  }
+}
   /* Loader styles */
 #loader {
   position: fixed;
