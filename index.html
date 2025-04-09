@@ -10,6 +10,11 @@
 </head>
 <body>
    <!-- Top Info Bar -->
+   <div class="logo">
+    <img src="your-logo.png" alt="Logo">
+    <div class="nav-toggle" onclick="toggleNav()">☰</div>
+  </div>
+  
   <div class="topbar">
     <div class="container">
       <div class="left">
@@ -582,6 +587,131 @@ nav ul li a:hover::after {
     left: 60px;
     width: 120px;
   }
+  @media (max-width: 768px) {
+  .topbar {
+    display: none;
+  }
+
+  header {
+    margin: 0;
+    padding: 20px 0;
+  }
+
+  header .container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 20px;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+  }
+
+  nav ul.nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: white;
+    margin-top: 10px;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+  }
+
+  nav ul.nav-links.show {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+    cursor: pointer;
+    font-size: 26px;
+    color: #333;
+  }
+
+  .login-btn {
+    margin-top: 15px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+  /* Responsive Mobile Styles */
+@media (max-width: 1024px) {
+  .topbar .container,
+  header .container,
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .topbar .left span {
+    display: block;
+    margin: 5px 0;
+  }
+
+  .topbar .right {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  nav ul.nav-links {
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px 0;
+  }
+
+  .hero {
+    padding: 60px 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+  }
+
+  .hero-image {
+    margin-top: 30px;
+  }
+
+  .login-btn {
+    padding: 10px 16px;
+  }
+
+  .btn {
+    padding: 12px 18px;
+    font-size: 14px;
+  }
+
+  .star {
+    top: -20px;
+    left: 20px;
+    width: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .login-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
   /*avout us */
   .wrapper {
       display: flex;
@@ -755,6 +885,91 @@ nav ul li a:hover::after {
       font-weight: 600;
       cursor: pointer;
     }
+    @media (max-width: 768px) {
+  /* Wrapper for cards */
+  .wrapper {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .card {
+    width: 90%;
+    height: auto;
+    margin: 20px 0;
+  }
+
+  .card img {
+    height: 250px;
+  }
+
+  .card-content {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+
+  .card-content h2 {
+    font-size: 24px;
+  }
+
+  .card-content p {
+    font-size: 16px;
+    max-width: 90%;
+  }
+
+  .card-content a {
+    font-size: 14px;
+  }
+
+  /* Section */
+  .section {
+    padding: 40px 15px;
+  }
+
+  .section h1 {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  /* Solutions */
+  .solutions {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .solution-item {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .solution-item img {
+    width: 50px;
+    margin-bottom: 15px;
+  }
+
+  .solution-title {
+    font-size: 18px;
+  }
+
+  .solution-text {
+    font-size: 14px;
+  }
+
+  .read-more {
+    font-size: 13px;
+  }
+}
+
     /*team*/
     .team-section {
       display: flex;
@@ -923,6 +1138,86 @@ nav ul li a:hover::after {
     .purchase-btn:hover {
       background: #009edc;
     }
+    
+    @media (max-width: 768px) {
+  /* Team Section */
+  .team-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+  }
+
+  .team-text {
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .carousel-wrapper {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .carousel {
+    gap: 10px;
+    padding-left: 10px;
+  }
+
+  .member-card {
+    width: 220px;
+    margin: 0;
+  }
+
+  .nav-buttons {
+    justify-content: center;
+  }
+
+  .nav-buttons button {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  /* Pricing Section */
+  h1 {
+    font-size: 26px;
+  }
+
+  p.subtitle {
+    font-size: 14px;
+    padding: 0 15px;
+  }
+
+  .pricing-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pricing-card {
+    width: 90%;
+    padding: 25px;
+  }
+
+  .price {
+    font-size: 30px;
+  }
+
+  .package-type {
+    font-size: 16px;
+  }
+
+  ul.features {
+    font-size: 14px;
+  }
+
+  .purchase-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 15px;
+  }
+}
+
     /*blog*/
     /* General Section Styling */
 .blog-section {
@@ -1005,6 +1300,43 @@ nav ul li a:hover::after {
   border-top: 2px solid #00bfff;
   padding-top: 10px;
   margin: 0;
+}
+@media (max-width: 768px) {
+  .blog-section {
+    padding: 40px 15px;
+  }
+
+  .blog-section h2 {
+    font-size: 26px;
+    color: #1c1c1c; /* Make sure this is visible; previously set to white */
+  }
+
+  .blog-section p.subtitle {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+
+  .blog-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .blog-card {
+    width: 90%;
+  }
+
+  .blog-card img {
+    height: 180px;
+  }
+
+  .blog-content h3 {
+    font-size: 18px;
+  }
+
+  .blog-content p.meta {
+    font-size: 13px;
+  }
 }
 
     /*footer*/
@@ -1092,6 +1424,55 @@ footer a:hover {
 .footer-bottom .social-icons a:hover {
   color: #00cfff;
 }
+@media (max-width: 768px) {
+  footer {
+    padding: 40px 15px;
+    text-align: center;
+  }
+
+  footer .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  footer .footer-logo img {
+    height: 40px;
+  }
+
+  footer .footer-description {
+    font-size: 14px;
+    margin-top: 15px;
+  }
+
+  footer h4 {
+    font-size: 16px;
+    margin-top: 30px;
+  }
+
+  footer ul li {
+    margin-bottom: 8px;
+  }
+
+  .footer-contact p,
+  .footer-contact a {
+    font-size: 14px;
+  }
+
+  .footer-bottom {
+    font-size: 13px;
+    padding-top: 15px;
+  }
+
+  .footer-bottom .social-icons {
+    margin-top: 10px;
+  }
+
+  .footer-bottom .social-icons a {
+    margin: 0 6px;
+    font-size: 16px;
+  }
+}
 
   </style>
   <script>
@@ -1119,4 +1500,10 @@ footer a:hover {
         updateCarousel();
       }
     }
-  </script>
+   
+  function toggleNav() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('show');
+  }
+</script>
+
