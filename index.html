@@ -355,7 +355,26 @@
     </div>
   </div>
 </div></section>
-  
+<section class="testimonial-section">
+  <div class="confetti"></div>
+  <h2>Feedback What You Say?</h2>
+
+  <div class="floating-avatars">
+    <img src="https://randomuser.me/api/portraits/women/44.jpg" onclick="showTestimonial(0)" alt="avatar1">
+    <img src="https://randomuser.me/api/portraits/men/32.jpg" onclick="showTestimonial(1)" alt="avatar2">
+    <img src="https://randomuser.me/api/portraits/women/65.jpg" onclick="showTestimonial(2)" alt="avatar3">
+    <img src="https://randomuser.me/api/portraits/men/45.jpg" onclick="showTestimonial(3)" alt="avatar4">
+  </div>
+
+  <div class="testimonial-container" id="testimonial">
+    <img src="https://randomuser.me/api/portraits/women/44.jpg" class="center-avatar" id="avatar" alt="Center Avatar">
+    <p class="testimonial-text" id="text">
+      Professional. Recommended professional and great experience. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend, adipiscing elit, sed do eiusmodas tempor incididunt.
+    </p>
+    <div class="testimonial-author" id="author">Lana Roadse</div>
+    <div class="testimonial-role" id="role">CEO of Softino</div>
+  </div>
+</section>
   
   <footer style="background-color: #f8f9ff; padding: 60px 0; font-family: 'Arial', sans-serif;">
     <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between;">
@@ -1429,6 +1448,141 @@ nav ul li a:hover::after {
     font-size: 13px;
   }
 }
+/*testimonials*/
+h2 {
+      font-size: 2.2rem;
+      margin-top: 40px;
+      color: #fefefe;
+      text-align: center;
+    }
+
+    .testimonial-section {
+      position: relative;
+      padding: 80px 20px;
+    }
+
+    .testimonial-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 40px 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .testimonial-text {
+      font-size: 1rem;
+      color: #2d2d2d;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      padding: 0 10px;
+    }
+
+    .testimonial-author {
+      color: #00bfff;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    .testimonial-role {
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    .center-avatar {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #fff;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+      margin-bottom: 20px;
+      transition: 0.3s ease;
+    }
+
+    .floating-avatars {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: auto;
+    }
+
+    .floating-avatars img {
+      position: absolute;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+      opacity: 0.8;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .floating-avatars img:hover {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+
+    .floating-avatars img:nth-child(1) { top: 20%; left: 5%; }
+    .floating-avatars img:nth-child(2) { top: 10%; right: 10%; }
+    .floating-avatars img:nth-child(3) { bottom: 15%; left: 10%; }
+    .floating-avatars img:nth-child(4) { bottom: 10%; right: 8%; }
+
+    .confetti {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      opacity: 0.05;
+      pointer-events: none;
+    }
+
+    @media screen and (max-width: 768px) {
+      h2 {
+        font-size: 1.8rem;
+      }
+
+      .testimonial-container {
+        padding: 30px 20px;
+      }
+
+      .center-avatar {
+        width: 100px;
+        height: 100px;
+      }
+
+      .floating-avatars img {
+        width: 50px;
+        height: 50px;
+      }
+
+      .floating-avatars img:nth-child(1) { top: 15%; left: 2%; }
+      .floating-avatars img:nth-child(2) { top: 8%; right: 2%; }
+      .floating-avatars img:nth-child(3) { bottom: 10%; left: 5%; }
+      .floating-avatars img:nth-child(4) { bottom: 5%; right: 5%; }
+    }
+
+    @media screen and (max-width: 480px) {
+      .testimonial-text {
+        font-size: 0.95rem;
+      }
+
+      .testimonial-author {
+        font-size: 1rem;
+      }
+
+      .testimonial-role {
+        font-size: 0.8rem;
+      }
+
+      .testimonial-container {
+        padding: 20px 10px;
+      }
+    }
 
     /*footer*/
     /* FOOTER STYLES */
@@ -1568,6 +1722,7 @@ footer a:hover {
 
   </style>
   <script>
+    
     function toggleNav() {
     const navLinks = document.querySelector('.nav-links');
     navLinks.classList.toggle('show');
@@ -1601,6 +1756,52 @@ footer a:hover {
     const loader = document.getElementById("loader");
     loader.classList.add("hidden");
   });
+ const testimonials = [
+      {
+        avatar: "https://randomuser.me/api/portraits/women/44.jpg",
+        text: "Professional. Recommended professional and great experience. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend, adipiscing elit, sed do eiusmodas tempor incididunt.",
+        author: "Lana Roadse",
+        role: "CEO of Softino"
+      },
+      {
+        avatar: "https://randomuser.me/api/portraits/men/32.jpg",
+        text: "Excellent support and brilliant results! They really helped my business grow faster.",
+        author: "John Carter",
+        role: "CTO of NexaTech"
+      },
+      {
+        avatar: "https://randomuser.me/api/portraits/women/65.jpg",
+        text: "Creative and consistent. Love working with this team. Highly recommend them!",
+        author: "Emily Stone",
+        role: "Marketing Lead at Growify"
+      },
+      {
+        avatar: "https://randomuser.me/api/portraits/men/45.jpg",
+        text: "They exceeded expectations in every way. Reliable, fast, and very professional.",
+        author: "Michael Lane",
+        role: "Founder of Devify"
+      }
+    ];
+
+
+    function showTestimonial(index) {
+      const testimonial = testimonials[index];
+      document.getElementById('avatar').src = testimonial.avatar;
+      document.getElementById('text').innerText = testimonial.text;
+      document.getElementById('author').innerText = testimonial.author;
+      document.getElementById('role').innerText = testimonial.role;
+      currentIndex = index;
+    }
+
+    function autoPlayTestimonials() {
+      setInterval(() => {
+        currentIndex = (currentIndex + 1) % testimonials.length;
+        showTestimonial(currentIndex);
+      }, 4000);
+    }
+
+    // Start autoplay
+    autoPlayTestimonials(); 
   
 </script>
 
