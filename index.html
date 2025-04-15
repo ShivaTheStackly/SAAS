@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/> 
 </head>
 <body>
+  <div class="custom-cursor"></div>
   <!-- Loader Section -->
 <div id="loader">
   <img src="logo-stackly (1).png" alt="Loading..." />
@@ -753,6 +754,23 @@ nav ul li a:hover::after {
     left: 60px;
     width: 120px;
   }
+  @keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-content {
+  max-width: 600px;
+  opacity: 0;
+  animation: fadeDown 1s ease-out forwards;
+  animation-delay: 0.3s;
+}
   @media (max-width: 768px) {
   .topbar {
     display: none;
@@ -1051,6 +1069,8 @@ nav ul li a:hover::after {
       font-weight: 600;
       cursor: pointer;
     }
+    
+    
     @media (max-width: 768px) {
   /* Wrapper for cards */
   .wrapper {
@@ -1165,7 +1185,7 @@ nav ul li a:hover::after {
       gap: 20px;
     }
     .nav-buttons button {
-      background: white;
+      background: rgb(193, 22, 22);
       border: none;
       box-shadow: 0 4px 15px rgba(0,0,0,0.1);
       border-radius: 50%;
@@ -1973,7 +1993,17 @@ footer a:hover {
     font-size: 16px;
   }
 }
-
+.custom-cursor {
+  width: 30px;
+  height: 30px;
+  border: 2px solid rgb(29, 41, 94);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease;
+}
   </style>
   <script>
     
@@ -2056,6 +2086,11 @@ footer a:hover {
 
     // Start autoplay
     autoPlayTestimonials(); 
-  
+    const cursor = document.querySelector('.custom-cursor');
+
+document.addEventListener('mousemove', (e) => {
+  cursor.style.left = `${e.clientX}px`;
+  cursor.style.top = `${e.clientY}px`;
+});
 </script>
 
