@@ -363,38 +363,41 @@
   <h2>Stay Contact Us</h2>
   <p>Get in touch and let us know how we can help. Fill out the form and we’ll be in touch as soon as possible.</p>
 
-  <form>
+  <form id="contactForm">
     <div>
       <label>First Name</label>
-      <input type="text" placeholder="Type First name">
+      <input type="text" id="firstName" placeholder="Type First name" required>
     </div>
     <div>
       <label>Last Name</label>
-      <input type="text" placeholder="Type Last name">
+      <input type="text" id="lastName" placeholder="Type Last name" required>
     </div>
     <div>
       <label>Email Address</label>
-      <input type="email" placeholder="Type Email">
+      <input type="email" id="email" placeholder="Type Email" required>
     </div>
     <div>
       <label>Phone Number</label>
-      <input type="text" placeholder="Type Phone">
+      <input type="text" id="phone" placeholder="Type Phone">
     </div>
     <div class="full-width">
       <label>Message</label>
-      <textarea rows="6" placeholder="Type Message"></textarea>
+      <textarea id="message" rows="6" placeholder="Type Message" required></textarea>
     </div>
     <div class="submit-button">
       <button type="submit">Send Message</button>
     </div>
   </form>
+
+  <div id="formResponse" style="margin-top: 20px; font-weight: bold;"></div>
 </section>
+
 <section class="info-map-section">
   <div class="info-boxes">
     <div class="info-box">
       <img src="https://img.icons8.com/ios-filled/100/2563eb/send.png" alt="Address Icon" />
       <h4>ADDRESS:</h4>
-      <p>423B, Road Wordwide Country, USA</p>
+      <p>423B, Road Worldwide Country, USA</p>
     </div>
     <div class="info-box">
       <img src="https://img.icons8.com/ios-filled/100/2563eb/new-post.png" alt="Email Icon" />
@@ -407,6 +410,8 @@
       <p>+91-234-567-8900</p>
     </div>
   </div>
+</section>
+
 
   <div class="map-container">
     <iframe
@@ -581,6 +586,7 @@ html {
   justify-content: space-between;
   align-items: center;
   padding: 0 30px;
+  font-family: sans-serif;
 }
 
 .topbar .left span {
@@ -723,12 +729,14 @@ nav ul li a:hover::after {
     font-size: 56px;
     margin-bottom: 30px;
     font-weight: 800;
+    font-family:Arial, Helvetica, sans-serif;
   }
   
   .hero-content p {
     font-size: 16px;
     margin-bottom: 30px;
     line-height: 1.6;
+    font-family: Arial, Helvetica, sans-serif;
   }
   
   .btn {
@@ -939,6 +947,7 @@ nav ul li a:hover::after {
       font-size: 32px;
       font-weight: bold;
       margin-bottom: 15px;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
     .card-content p {
@@ -946,6 +955,7 @@ nav ul li a:hover::after {
       line-height: 1.6;
       margin-bottom: 20px;
       max-width: 450px;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
     .card-content a {
@@ -955,6 +965,7 @@ nav ul li a:hover::after {
       font-size: 16px;
       border-bottom: 2px solid white;
       transition: opacity 0.3s;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
     .card-content a:hover {
@@ -982,6 +993,7 @@ nav ul li a:hover::after {
       max-width: 900px;
       margin: 0 auto 60px;
       color: black;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
     .contact-info {
@@ -1022,6 +1034,7 @@ nav ul li a:hover::after {
       color:black;
       font-size: 2.5em;
       margin-bottom: 60px;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
     .solutions {
@@ -1055,6 +1068,7 @@ nav ul li a:hover::after {
     .solution-title {
       font-size: 1.2em;
       font-weight: 700;
+      font-family: Arial, Helvetica, sans-serif;
       margin-bottom: 10px;  
     }
 
@@ -1177,6 +1191,7 @@ nav ul li a:hover::after {
       color: #1e1e2d;
       font-weight: 700;
       margin-bottom: 20px;
+      font-family: Arial, Helvetica, sans-serif;
     }
     .team-text p {
       color: #7a7a7a;
@@ -2096,5 +2111,29 @@ document.addEventListener('mousemove', (e) => {
   cursor.style.left = `${e.clientX}px`;
   cursor.style.top = `${e.clientY}px`;
 });
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const firstName = document.getElementById("firstName").value.trim();
+    const lastName = document.getElementById("lastName").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const message = document.getElementById("message").value.trim();
+    const response = document.getElementById("formResponse");
+
+    // Basic validation
+    if (!firstName || !lastName || !email || !message) {
+      response.style.color = "red";
+      response.innerText = "Please fill out all required fields.";
+      return;
+    }
+
+    // Success simulation
+    response.style.color = "green";
+    response.innerText = `Thank you, ${firstName}! Your message has been sent successfully.`;
+
+    // Reset the form
+    this.reset();
+  });
 </script>
 
