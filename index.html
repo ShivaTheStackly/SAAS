@@ -17,6 +17,7 @@
 </div>
 
 
+ 
 
   <!-- Main Header -->
   <header>
@@ -509,7 +510,24 @@
   display: none;
 }
 
+/* Show only on mobile view (screen width 768px or less) */
+@media (max-width: 768px) {
+  .mobile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
 
+  .logo {
+    height: 40px; /* adjust as needed */
+  }
+
+  .nav-toggle {
+    font-size: 24px;
+    cursor: pointer;
+  }
+}
   /* Loader styles */
 #loader {
   position: fixed;
@@ -705,6 +723,71 @@ nav ul li a:hover::after {
     transform: scale(1);
   }
 }
+@media (max-width: 768px) {
+
+/* Header Styling */
+header {
+  background: rgba(37, 36, 36, 0.9); /* Slightly darker background for mobile */
+  padding: 10px 20px;
+}
+
+header .container {
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/* Logo Styling */
+.logo img {
+  height: 35px;  /* Slightly smaller logo */
+}
+
+/* Navigation Menu (Nav Links) */
+nav ul.nav-links {
+  display: none;  /* Hide navigation links by default */
+  list-style: none;
+  flex-direction: column; /* Stack nav items vertically */
+  gap: 15px;
+  width: 100%;  /* Full width of container */
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  position: static;  /* Make dropdown menu static */
+  box-shadow: none;
+  background-color: #2a2a2a;
+}
+
+/* Active/hovered link styles for mobile */
+nav ul li a.active,
+nav ul li a:hover {
+  color: #8CD8BC;  /* Highlight color */
+}
+
+/* Toggle Nav Links Button (Hamburger Icon) */
+.nav-toggle {
+  display: block;
+  font-size: 30px;
+  color: #fdfdfd;
+  cursor: pointer;
+}
+
+/* Login Button */
+.login-btn {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;  /* Spacing from nav links */
+}
+}
+
+/* Show nav links on toggle */
+.nav-links.show {
+display: flex;
+}
+
+
   body {
     font-family: 'Arial', sans-serif;
     color: rgb(0, 0, 0);
@@ -829,149 +912,107 @@ nav ul li a:hover::after {
   animation-delay: 0.3s;
 }
 @media (max-width: 768px) {
-  .topbar {
-    display: none;
-  }
 
-  header {
-    margin: 0;
-    padding: 20px 0;
-  }
-
-  header .container {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0 20px;
-  }
-
-  .logo {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    align-items: center;
-  }
-
-  nav ul.nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%; /* Corrected width for mobile */
-    background: rgba(255, 255, 255, 0.95); /* Clean light transparent background */
-    margin-top: 10px;
-    border-top: 1px solid #eee;
-    padding: 10px 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  }
-
-  nav ul.nav-links.show {
-    display: flex;
-  }
-
-  nav ul.nav-links li a {
-    color: #1d1e4c; /* Text color */
-    padding: 12px 0;
-    display: block;
-    width: 100%;
-    font-size: 16px;
-    font-weight: 500;
-    text-decoration: none;
-    transition: background 0.3s, color 0.3s;
-  }
-
-  nav ul.nav-links li a:hover,
-  nav ul.nav-links li a.active {
-    color: #2563eb; /* Active text color */
-    background: rgba(37, 99, 235, 0.1); /* Optional: light blue background on active/hover */
-    border-radius: 6px;
-  }
-
-  .nav-toggle {
-    display: block;
-    cursor: pointer;
-    font-size: 26px;
-    color: #1d1e4c;
-  }
-
-  .login-btn {
-    margin-top: 15px;
-    width: 100%;
-    text-align: center;
-    font-size: 16px;
-  }
+/* Body Adjustments */
+body {
+  background: #8CD8BC;
+  font-size: 14px; /* Adjusted font size for mobile readability */
 }
 
-
-  /* Responsive Mobile Styles */
-@media (max-width: 1024px) {
-  .topbar .container,
-  header .container,
-  .hero {
-    flex-direction: column;
-    text-align: center;
-    padding: 20px;
-  }
-
-  .topbar .left span {
-    display: block;
-    margin: 5px 0;
-  }
-
-  .topbar .right {
-    flex-direction: column;
-    gap: 5px;
-  }
-
-  nav ul.nav-links {
-    flex-direction: column;
-    gap: 15px;
-    padding: 10px 0;
-  }
-
-  .hero {
-    padding: 60px 20px;
-  }
-
-  .hero-content h1 {
-    font-size: 36px;
-  }
-
-  .hero-content p {
-    font-size: 15px;
-  }
-
-  .hero-image {
-    margin-top: 30px;
-  }
-
-  .login-btn {
-    padding: 10px 16px;
-  }
-
-  .btn {
-    padding: 12px 18px;
-    font-size: 14px;
-  }
-
-  .star {
-    top: -20px;
-    left: 20px;
-    width: 80px;
-  }
+/* Hero Section Styling */
+.hero {
+  flex-direction: column;  /* Stack content vertically */
+  align-items: center;     /* Center the items */
+  justify-content: center; /* Center align content */
+  padding: 40px 20px;      /* Reduced padding for smaller screen */
 }
 
-@media (max-width: 480px) {
-  .hero-content h1 {
-    font-size: 28px;
-  }
+/* Hero Content */
+.hero-content {
+  max-width: 100%;  /* Allow content to use full width */
+  text-align: center;  /* Center text */
+  margin-bottom: 20px;  /* Space between text and button */
+}
 
-  .btn {
-    width: 100%;
-    padding: 12px;
-  }
+.hero-content h1 {
+  font-size: 32px;  /* Adjusted font size */
+  font-weight: 700; /* Adjusted for readability */
+  margin-bottom: 20px;  /* Reduced space between heading and paragraph */
+}
 
-  .login-btn {
-    width: 100%;
-    text-align: center;
-  }
+.hero-content p {
+  font-size: 14px;  /* Adjusted font size */
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Button Styling */
+.btn {
+  padding: 12px 22px;  /* Reduced padding for button */
+  font-size: 14px;     /* Adjusted font size */
+  border-radius: 50px; /* Rounded button */
+  background-color: #65649F;
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+  animation: bubble 1.5s infinite;
+}
+
+/* Hero Image Adjustments */
+.hero-image img.star {
+  max-width: 90%;  /* Make the image smaller on mobile */
+  height: auto;
+  border-radius: 10px;
+  animation: rotate 5s linear infinite, shake 0.3s infinite, wrinkle 2s ease-in-out infinite;
+}
+
+/* Star Adjustment */
+.star {
+  top: -30px;
+  left: 50%;
+  width: 100px;
+  transform: translateX(-50%); /* Center star on mobile */
+}
+}
+
+/* Ensure animations work on mobile */
+@keyframes rotate {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+
+@keyframes shake {
+0%, 100% { transform: translate(0, 0); }
+25% { transform: translate(2px, -2px); }
+50% { transform: translate(-2px, 2px); }
+75% { transform: translate(1px, -1px); }
+}
+
+@keyframes wrinkle {
+0%, 100% {
+  filter: brightness(100%) contrast(100%) hue-rotate(0deg);
+}
+50% {
+  filter: brightness(110%) contrast(120%) hue-rotate(20deg);
+}
+}
+
+@keyframes fadeDown {
+0% {
+  opacity: 0;
+  transform: translateY(-60px);
+}
+100% {
+  opacity: 1;
+  transform: translateY(0);
+}
+}
+
+.hero-content {
+max-width: 100%;
+opacity: 0;
+animation: fadeDown 1s ease-out forwards;
+animation-delay: 0.3s;
 }
 
   /*avout us */
@@ -1039,62 +1080,6 @@ nav ul li a:hover::after {
     .card-content a:hover {
       opacity: 0.8;
     }
-    @media (max-width: 768px) {
-  .wrapper {
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
-    align-items: center;
-  }
-
-  .card {
-    width: 90%;
-    height: auto;
-    margin-left: 0;
-  }
-
-  .card img {
-    height: 250px;
-    object-fit: cover;
-  }
-
-  .card-content {
-    top: 20px;
-    left: 20px;
-  }
-
-  .card-content h2 {
-    font-size: 24px;
-  }
-
-  .card-content p {
-    font-size: 14px;
-    max-width: 100%;
-  }
-
-  .card-content a {
-    font-size: 14px;
-  }
-}
-@media (max-width: 480px) {
-  .card-content h2 {
-    font-size: 20px;
-  }
-
-  .card-content p {
-    font-size: 13px;
-  }
-
-  .card-content {
-    top: 15px;
-    left: 15px;
-  }
-
-  .card-content a {
-    font-size: 13px;
-  }
-}
-
     .section {
       padding: 50px 20px 60px;
       text-align: center;
@@ -1232,7 +1217,6 @@ nav ul li a:hover::after {
       cursor: pointer;
     }
     
-    
 
     /*team*/
     @keyframes rotateImage {
@@ -1243,6 +1227,151 @@ nav ul li a:hover::after {
     transform: rotate(360deg);
   }
 }
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
+
+/* General Body Styling for Mobile */
+body {
+  font-size: 14px; /* Slightly smaller text for mobile */
+}
+
+/* Section Styling */
+.section {
+  padding: 30px 20px; /* Adjusted padding for mobile view */
+  text-align: center;
+  opacity: 1;  /* Ensure section is visible on load */
+  transform: none; /* Remove initial translate effect */
+}
+
+/* Card Styling */
+.wrapper {
+  flex-direction: column;  /* Stack the cards vertically */
+  gap: 20px;  /* Reduced gap for mobile */
+  padding: 20px;  /* Reduced padding */
+}
+
+.card {
+  width: 100%;  /* Make the card take up full width */
+  height: auto; /* Adjust height for mobile */
+  margin-left: 0;  /* Remove left margin */
+}
+
+.card img {
+  filter: brightness(60%);
+  transition: transform 0.3s ease;
+}
+
+.card-content h2 {
+  font-size: 1.5em; /* Adjusted heading size for mobile */
+}
+
+.card-content p {
+  font-size: 1em; /* Adjusted font size */
+  max-width: 100%; /* Allow text to fill the container */
+}
+
+.card-content a {
+  font-size: 0.9em; /* Smaller font for mobile */
+}
+
+/* Section Heading */
+.section h1 {
+  font-size: 1.8em; /* Smaller font size for mobile */
+  margin-bottom: 30px; /* Reduced space */
+}
+
+.solutions {
+  display: flex;
+  flex-direction: column; /* Stack solution items vertically */
+  align-items: center;  /* Center align items */
+  gap: 20px;  /* Adjusted gap */
+}
+
+.solution-item {
+  flex: 1 1 100%; /* Make each item take full width on mobile */
+  max-width: 100%; /* Ensure it takes up the full available space */
+  text-align: center; /* Center text in solution items */
+}
+
+.solution-item img {
+  width: 50px; /* Adjusted size for smaller screens */
+  margin-bottom: 10px;  /* Reduced space between image and text */
+}
+
+.solution-title {
+  font-size: 1em; /* Smaller font size */
+  margin-bottom: 8px;
+}
+
+.solution-text {
+  font-size: 0.9em; /* Smaller font for mobile */
+}
+
+.read-more {
+  font-size: 0.8em; /* Smaller font size */
+}
+
+/* Contact Info */
+.contact-info {
+  display: flex;
+  flex-direction: column; /* Stack contact info items vertically */
+  gap: 20px; /* Adjust gap for mobile */
+  font-size: 14px;
+}
+
+.contact-info div {
+  text-align: center;
+  opacity: 1;
+  transform: none; /* Remove initial animation effect */
+  transition: none; /* Disable transition on mobile */
+}
+
+/* Card Hover Effects */
+.solution-item:hover img {
+  transform: rotate(360deg); /* Keep rotation effect */
+}
+
+/* Keyframe Animation Adjustments */
+@keyframes rotateImage {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Hero Image and Text Adjustments */
+.hero-content {
+  max-width: 100%; /* Take up full width */
+  margin-bottom: 30px; /* Reduced space between content */
+}
+
+.hero-content h1 {
+  font-size: 1.8em;  /* Adjusted heading size */
+  margin-bottom: 20px;  /* Reduced space between heading and paragraph */
+}
+
+.hero-content p {
+  font-size: 1em;  /* Adjusted font size */
+  margin-bottom: 20px;  /* Adjusted spacing */
+}
+
+/* Button Styling */
+.btn {
+  padding: 10px 20px;  /* Reduced padding for smaller screens */
+  font-size: 1em;  /* Adjusted button font size */
+}
+
+/* Other Adjustments */
+.star {
+  width: 80px;  /* Reduced width of star for mobile */
+  left: 50%;  /* Centered star */
+  transform: translateX(-50%);
+}
+}
+
+
     .team-section {
       display: flex;
       align-items: flex-start;
@@ -1352,75 +1481,6 @@ nav ul li a:hover::after {
     .social-icons .tw { background: #55acee; }
     .social-icons .gp { background: #dd4b39; }
     .social-icons .in { background: #0077b5; }
-
-    @media (max-width: 768px) {
-  .team-section {
-    flex-direction: column;
-    padding: 20px;
-    align-items: center;
-  }
-
-  .team-text {
-    margin: 0 0 30px 0;
-    max-width: 100%;
-    text-align: center;
-  }
-
-  .team-text h2 {
-    font-size: 22px;
-  }
-
-  .team-text p {
-    font-size: 14px;
-  }
-
-  .nav-buttons {
-    justify-content: center;
-    margin-top: 10px;
-  }
-
-  .carousel-wrapper {
-    width: 100%;
-    overflow-x: auto;
-    scrollbar-width: none; /* Firefox */
-  }
-
-  .carousel-wrapper::-webkit-scrollbar {
-    display: none; /* Chrome, Safari */
-  }
-
-  .carousel {
-    width: max-content;
-    gap: 15px;
-  }
-
-  .member-card {
-    width: 240px;
-    margin: 0;
-    scroll-snap-align: start;
-  }
-
-  .carousel-wrapper {
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    display: flex;
-  }
-
-  .member-info h3 {
-    font-size: 16px;
-  }
-
-  .member-info p {
-    font-size: 13px;
-  }
-
-  .social-icons a {
-    width: 28px;
-    height: 28px;
-    font-size: 12px;
-  }
-}
-
     /*pricing*/
     h1 {
   font-size: 32px;
@@ -1849,66 +1909,6 @@ h1:hover {
   font-size: 1rem;
   color: #444;
 }
-@media (max-width: 768px) {
-  .contact-section {
-    padding: 30px 15px;
-  }
-
-  .contact-section h2 {
-    font-size: 2rem;
-    text-align: center;
-  }
-
-  .contact-section p {
-    font-size: 0.95rem;
-    margin-left: 0;
-    margin-right: 0;
-    text-align: center;
-  }
-
-  form {
-    grid-template-columns: 1fr;
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  .full-width {
-    grid-column: 1 / 2;
-  }
-
-  .submit-button {
-    grid-column: 1 / 2;
-    justify-content: center;
-  }
-
-  .info-map-section {
-    padding: 20px 10px;
-  }
-
-  .info-boxes {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .info-box {
-    width: 100%;
-    max-width: 350px;
-    padding: 20px;
-  }
-
-  .info-box img {
-    width: 50px;
-  }
-
-  .info-box h4 {
-    font-size: 0.95rem;
-  }
-
-  .info-box p {
-    font-size: 0.95rem;
-  }
-}
 
 .map-container iframe {
   width: 100%;
@@ -2254,6 +2254,11 @@ footer a:hover {
   </style>
   <script>
     
+    function toggleNav() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('show');
+  }
+
     const carousel = document.getElementById('carousel');
     const cardWidth = 280; // including margin
     const totalCards = 6;
