@@ -1,148 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Register Page</title>
-  <link rel="icon" href="stackly_icon-removebg-preview.png" type="image/png" />
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="icon" href="stackly_icon-removebg-preview.png" type="image/png" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-size: cover;
+            background: url(03.png)no-repeat center center fixed;
+        }
 
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%);
-      overflow: hidden;
-    }
+        /* Add logo to the top-left corner */
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 100px; /* Adjust the size as needed */
+            height: auto;
+        }
 
-    .register-wrapper {
-      width: 450px;
-      padding: 40px;
-      background: rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(10px);
-      border-radius: 20px;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-      animation: slideIn 1s ease-out forwards;
-      opacity: 0;
-      transform: translateY(-40px);
-    }
-
-    @keyframes slideIn {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .register-wrapper h2 {
-      text-align: center;
-      margin-bottom: 25px;
-      color: #fff;
-      font-weight: 600;
-    }
-
-    .register-wrapper input {
-      width: 100%;
-      padding: 15px;
-      margin: 10px 0;
-      border-radius: 10px;
-      border: none;
-      font-size: 16px;
-      background: rgba(255, 255, 255, 0.9);
-      transition: 0.3s;
-    }
-
-    .register-wrapper input:focus {
-      outline: none;
-      box-shadow: 0 0 6px rgba(210, 153, 194, 0.5);
-    }
-
-    .register-wrapper button {
-      width: 100%;
-      padding: 14px;
-      background-color: #c471ed;
-      background-image: linear-gradient(315deg, #c471ed 0%, #f7797d 74%);
-      color: white;
-      font-weight: bold;
-      border: none;
-      border-radius: 50px;
-      cursor: pointer;
-      transition: all 0.3s;
-    }
-
-    .register-wrapper button:hover {
-      opacity: 0.9;
-    }
-
-    .register-wrapper .extra {
-      margin-top: 18px;
-      text-align: center;
-      font-size: 14px;
-      color: #fff;
-    }
-
-    .register-wrapper .extra a {
-      color: #fff;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    .register-wrapper .extra a:hover {
-      text-decoration: underline;
-    }
-  </style>
+        .container {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 40px;
+            border-radius: 8px;
+            width: 400px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 24px;
+        }
+        input[type="text"], input[type="email"], input[type="password"], select {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .error-message {
+            color: red;
+            font-size: 12px;
+        }
+    </style>
 </head>
 <body>
+    <!-- Logo in the top-left corner -->
+    <img src="logo-stackly (1).png" alt="Logo" class="logo">
 
-    <div class="register-wrapper">
-        <h2>Create Account</h2>
-        <form id="registerForm">
-          <input type="text" id="fullname" placeholder="Full Name" required>
-          <input type="email" id="email" placeholder="Email Address" required>
-          <input type="password" id="password" placeholder="Password" required>
-          <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
-          <button type="submit">Register</button>
-          <div class="extra">
-            Already have an account? <a href="test.html">Login</a>
-          </div>
+    <div class="container">
+        <h2>Simple And Easy To Sign Up</h2>
+        <form id="signupForm" action="" method="POST" onsubmit="return validateForm()">
+            <input type="text" name="first_name" id="first_name" placeholder="First name" required><br>
+            <input type="text" name="last_name" id="last_name" placeholder="Last name" required><br>
+            <div class="error-message" id="lastNameError"></div><br>
+            <input type="email" name="email" id="email" placeholder="Email" required><br>
+            <input type="text" name="phone" id="phone" placeholder="Phone" required><br>
+            <input type="password" name="password" id="password" placeholder="Password" required><br>
+            <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" required><br>
+            <select name="gender" id="gender" required>
+                <option value="">Select Gender...</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select><br>
+            <select name="country" id="country" required>
+                <option value="">Select Country...</option>
+                <option value="usa">USA</option>
+                <option value="india">India</option>
+                <option value="uk">UK</option>
+            </select><br>
+            <div>
+                <input type="checkbox" id="terms" required> I agree to the terms of use and privacy policy.
+            </div><br>
+            <button type="submit" class="btn">Create Account</button>
         </form>
-      </div>
-      <script>
-        document.getElementById("registerForm").addEventListener("submit", function (e) {
-          e.preventDefault();
-    
-          const fullname = document.getElementById("fullname").value.trim();
-          const email = document.getElementById("email").value.trim();
-          const password = document.getElementById("password").value;
-          const confirmPassword = document.getElementById("confirmPassword").value;
-    
-          if (!fullname || !email || !password || !confirmPassword) {
-            alert("Please fill in all fields.");
-            return;
-          }
-    
-          if (password !== confirmPassword) {
-            alert("Passwords do not match.");
-            return;
-          }
-    
-          // Save user to localStorage
-          const user = {
-            fullname,
-            email,
-            password
-          };
-    
-          localStorage.setItem("registeredUser", JSON.stringify(user));
-          alert("Registration successful! Please login.");
-          window.location.href = "test.html"; 
-        });
-      </script>
+        <div class="footer">
+            <p>Have an Account? <a href="test.html">Sign In!</a></p>
+        </div>
+    </div>
+
+    <script>
+        function validateForm() {
+    document.getElementById('lastNameError').innerHTML = '';
+
+    var lastName = document.getElementById('last_name').value;
+    if (!lastName) {
+        document.getElementById('lastNameError').innerHTML = 'Last name is required.';
+        return false;
+    }
+
+    var password = document.getElementById('password').value;
+    var confirmPassword = document.getElementById('confirm_password').value;
+    if (password !== confirmPassword) {
+        alert('Passwords do not match!');
+        return false;
+    }
+
+    var email = document.getElementById('email').value;
+    var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    if (!email.match(emailRegex)) {
+        alert('Please enter a valid email address.');
+        return false;
+    }
+
+    if (!document.getElementById('terms').checked) {
+        alert('You must agree to the terms of use and privacy policy.');
+        return false;
+    }
+
+   
+    window.location.href = "test.html";
+    return false; // Prevent default form submission
+}
+
+    </script>
 </body>
 </html>
