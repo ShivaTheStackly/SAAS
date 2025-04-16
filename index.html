@@ -31,8 +31,8 @@
       <nav>
         <ul class="nav-links">
           <li><a href="#home" class="active">Home</a></li>
-          <li><a href="#services">Services</a></li>
           <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
           <li><a href="#team">Team</a></li>
           <li><a href="#price">Pricing</a></li>
           <li><a href="#Contact">Contact</a></li>
@@ -144,7 +144,9 @@
 <section id="team"> <div class="team-section">
   <!-- Text Section -->
   <div class="team-text">
-    <img src="https://cdn-icons-png.flaticon.com/512/681/681494.png" style="width: 60px; filter: brightness(0) saturate(100%) invert(41%) sepia(26%) saturate(745%) hue-rotate(202deg) brightness(93%) contrast(93%); margin-bottom: 20px;" />
+    <img src="https://cdn-icons-png.flaticon.com/512/681/681494.png" 
+     style="width: 60px; filter: brightness(0) saturate(100%) invert(41%) sepia(26%) saturate(745%) hue-rotate(202deg) brightness(93%) contrast(93%); margin-bottom: 20px; 
+            animation: rotateImage 4s linear infinite;"/>
     <h2>Meet Our Expert Team Member Will Ready For Your Service</h2>
     <p>Leverage agile frameworks to provide a robust synopsis for high level</p>
     <div class="nav-buttons">
@@ -245,7 +247,8 @@
   </div>
 </div></section>
   
- <section id="price"> <h1>Choose Affordable Prices</h1>
+<section id="price" style="background-color: #FDF5EF;">
+  <h1>Choose Affordable Prices</h1>
   <p class="subtitle">
     Softino Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
   </p>
@@ -301,12 +304,14 @@
     <div>
 
     </section>
- <section id="blog"><h2 style="font-size: 36px; font-weight: bold; color: #ffffff;text-align: center;">Creative Blogs</h2>
-  <p style="color: #eae8e8; font-size: 16px; max-width: 700px; margin: auto;">
+</section>
+<section id="blog" style="background-color: #FDF5EF; padding: 60px 20px;">
+  <h2 style="font-size: 36px; font-weight: bold; color: #1c1c3c; text-align: center;">Creative Blogs</h2>
+  <p style="color: #555; font-size: 16px; max-width: 700px; margin: auto;">
     Softino Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
     consequat. Duis aute irure dolor in reprehenderit
   </p>
-</div>
+
 
 <div style="display: flex; flex-wrap: wrap; justify-content: center; margin-top: 40px; gap: 20px;">
   <!-- Blog Card 1 -->
@@ -607,17 +612,18 @@ html {
 
 /* Header Nav */
 header {
-  background: white;
-  padding: 30px 0;
+  background: rgba(200, 73, 73, 0);
+  padding: 20px 0;
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  margin: 40px;
+  margin: 0px;
 }
 header {
   position: sticky;
   top: 0;
   width: 100%;
+  background: rgba(37, 36, 36, 0.499);
   z-index: 999;
-  background-color: white; /* or any background color you prefer */
+   /* or any background color you prefer */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional for a subtle shadow */
 }
 
@@ -646,17 +652,17 @@ nav ul li a {
   position: relative;
   text-decoration: none;
   font-weight: 600;
-  color: #111827;
+  color: #fdfdfd;
   padding: 4px 0;
   transition: color 0.3s ease;
 }
 
 nav ul li a.active {
-  color: #00aaff;
+  color: #8CD8BC;
 }
 
 nav ul li a:hover {
-  color: #00aaff;
+  color: #8CD8BC;
 }
 
 /* Underline on hover */
@@ -667,7 +673,7 @@ nav ul li a::after {
   left: 0;
   height: 2px;
   width: 0%;
-  background-color: #00aaff;
+  background-color: #8CD8BC;
   transition: width 0.3s ease;
 }
 
@@ -694,22 +700,36 @@ nav ul li a:hover::after {
 /* Login Button */
 .login-btn {
   padding: 10px 22px;
-  background: linear-gradient(to right, #00cfff, #2f80ed);
+  background: linear-gradient(to right, #65649F);
   color: white;
   font-weight: bold;
   text-decoration: none;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 191, 255, 0.3);
   transition: 0.3s;
+  animation: pulse 2s infinite; /* Adding pulse animation */
 }
 
 .login-btn:hover {
   opacity: 0.9;
 }
+
+/* Pulse Animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1); /* Slightly enlarge the button */
+  }
+  100% {
+    transform: scale(1);
+  }
+}
   body {
     font-family: 'Arial', sans-serif;
-    color: white;
-    background: linear-gradient(to right, #1C2A1E, #AA96E0, #AA96E0);
+    color: rgb(0, 0, 0);
+    background: #8CD8BC;
   }
   
   .hero {
@@ -729,6 +749,7 @@ nav ul li a:hover::after {
     font-size: 56px;
     margin-bottom: 30px;
     font-weight: 800;
+    justify-content: right;
     font-family:Arial, Helvetica, sans-serif;
   }
   
@@ -740,23 +761,70 @@ nav ul li a:hover::after {
   }
   
   .btn {
-    background-color: #e6f72e;
-    color: black;
-    padding: 14px 24px;
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
+  background-color: #65649F;
+  color: black;
+  padding: 14px 24px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  border-radius: 100px;
+  animation: bubble 1.5s infinite; /* Adding bubble animation */
+}
+
+/* Bubble Animation */
+@keyframes bubble {
+  0% {
+    transform: scale(1);
   }
+  25% {
+    transform: scale(1.1); /* Slightly enlarge the button */
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.1); /* Enlarge the button again */
+  }
+  100% {
+    transform: scale(1);
+  }
+}
   
   .hero-image {
-    position: relative;
-  }
-  
-  .hero-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-  }
+      position: relative;
+    }
+
+    .hero-image img.star {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+
+      /* Animation styles */
+      animation: rotate 5s linear infinite,
+                 shake 0.3s infinite,
+                 wrinkle 2s ease-in-out infinite;
+    }
+
+    @keyframes rotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes shake {
+      0%, 100% { transform: translate(0, 0); }
+      25% { transform: translate(2px, -2px); }
+      50% { transform: translate(-2px, 2px); }
+      75% { transform: translate(1px, -1px); }
+    }
+
+    @keyframes wrinkle {
+      0%, 100% {
+        filter: brightness(100%) contrast(100%) hue-rotate(0deg);
+      }
+      50% {
+        filter: brightness(110%) contrast(120%) hue-rotate(20deg);
+      }
+    }
   
   .star {
     position: absolute;
@@ -1014,7 +1082,7 @@ nav ul li a:hover::after {
       font-weight: bold;
       color: #2c2c2c;
       font-size: 18px;
-      margin-top: 8px;
+      margin-top: 8px;  
     }
 
     .divider {
@@ -1057,7 +1125,29 @@ nav ul li a:hover::after {
   transition: transform 0.6s ease;
   filter: brightness(0) saturate(100%) invert(41%) sepia(26%) saturate(745%) hue-rotate(202deg) brightness(93%) contrast(93%);
 }
+.section {
+  opacity: 0;
+  transform: translateY(20px); /* Slightly shifted down */
+  transition: opacity 1s ease, transform 1s ease; /* Smooth transition */
+}
 
+/* Class to be applied when the section is in the viewport */
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Contact Info Elements */
+.contact-info div {
+  opacity: 0;
+  transform: translateY(10px); /* Slightly shifted up */
+  transition: opacity 1s ease 0.3s, transform 1s ease 0.3s; /* Smooth transition with delay */
+}
+
+.contact-info div.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 
     /* Rotate on hover */
@@ -1173,6 +1263,14 @@ nav ul li a:hover::after {
 }
 
     /*team*/
+    @keyframes rotateImage {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
     .team-section {
       display: flex;
       align-items: flex-start;
@@ -1180,7 +1278,6 @@ nav ul li a:hover::after {
       max-width: 1600px;
       margin: 0 auto;
       background-color: #FDF5EF;
-      margin-bottom: 40px;
     }
     .team-text {
       max-width: 400px;
@@ -1202,7 +1299,7 @@ nav ul li a:hover::after {
       gap: 20px;
     }
     .nav-buttons button {
-      background: rgb(193, 22, 22);
+      background: #8CD8BC;
       border: none;
       box-shadow: 0 4px 15px rgba(0,0,0,0.1);
       border-radius: 50%;
@@ -1285,22 +1382,41 @@ nav ul li a:hover::after {
     .social-icons .in { background: #0077b5; }
     /*pricing*/
     h1 {
-      font-size: 32px;
-      font-weight: 700;
-      text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  padding: 30px;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
 
-    }
+h1:hover {
+  transform: scale(1.08);
+  text-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
     p.subtitle {
-      color: #d3d1d1;
+      color: #000000;
       max-width: 600px;
       margin: 10px auto 40px;
       font-size: 16px;
     }
+    @keyframes bubble {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+}
+
+.pricing-card {
+  animation: bubble 3s ease-in-out infinite;
+}
     .pricing-container {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       gap: 30px;
+      
     }
     .pricing-card {
       background: #13131f;
@@ -1310,10 +1426,19 @@ nav ul li a:hover::after {
       position: relative;
       box-shadow: 0 8px 20px rgba(0,0,0,0.5);
     }
+    .pricing-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
     .price {
       font-size: 36px;
       font-weight: 700;
       margin-bottom: 10px;
+      color: white;
     }
     .package-type {
       color: #00bfff;
@@ -1330,19 +1455,22 @@ nav ul li a:hover::after {
       margin-bottom: 10px;
       color: #ccc;
     }
+    
     .purchase-btn {
-      background: #00bfff;
-      color: #fff;
-      border: none;
-      padding: 12px 20px;
-      border-radius: 30px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    .purchase-btn:hover {
-      background: #009edc;
-    }
+  background: #65649F;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.purchase-btn:hover {
+  background: #009edc;
+  transform: scale(1.05);
+}
     
     @media (max-width: 768px) {
   /* Team Section */
@@ -1426,7 +1554,7 @@ nav ul li a:hover::after {
     /*blog*/
     /* General Section Styling */
 .blog-section {
-  padding: 60px 20px;
+  padding: 40px 20px;
   text-align: center;
   background-color: #fff;
 }
@@ -1450,7 +1578,7 @@ nav ul li a:hover::after {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 40px;
 }
 
 /* Blog Card */
@@ -1473,7 +1601,14 @@ nav ul li a:hover::after {
   height: 200px;
   object-fit: cover;
 }
+.blog-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
 
+  .blog-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  }
 /* Tag on Image */
 .blog-tag {
   position: absolute;
@@ -1546,7 +1681,7 @@ nav ul li a:hover::after {
 /*contact us */
 
 .contact-section {
-      padding: 60px 20px;
+      padding: 40px 20px;
       max-width: 1600px;
       margin: 0 auto;
       background-color: white;
@@ -1612,7 +1747,7 @@ nav ul li a:hover::after {
     }
 
     button {
-      background-color: #2563eb;
+      background-color: #65649F;
       color: white;
       padding: 14px 30px;
       font-size: 1rem;
@@ -1638,7 +1773,7 @@ nav ul li a:hover::after {
       }
     }
     .info-map-section {
-  margin-top: 60px;
+  
   padding: 20px;
   background-color: #f9f9ff;
 }
@@ -1659,7 +1794,7 @@ nav ul li a:hover::after {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: 0.3s ease;
-  border-bottom: 4px solid #2563eb;
+  border-bottom: 4px solid #65649F;
 }
 
 .info-box:hover {
@@ -2136,5 +2271,33 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
     // Reset the form
     this.reset();
   });
+
+   // Select all sections
+   const sections = document.querySelectorAll('.section');
+
+const options = {
+  threshold: 0.5 // 50% of the section must be visible
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible'); // Add visible class to animate
+    }
+  });
+}, options);
+
+// Observe each section
+sections.forEach(section => {
+  observer.observe(section);
+});
+
+// Optionally, add an animation for the contact-info divs separately
+const contactInfo = document.querySelectorAll('.contact-info div');
+
+contactInfo.forEach(info => {
+  observer.observe(info); // Observe each contact-info div
+});
+
 </script>
 
