@@ -16,11 +16,7 @@
   <img src="logo-stackly (1).png" alt="Loading..." />
 </div>
 
-<div class="mobile-header">
-  <img src="logo-stackly (1).png" alt="Logo" class="logo">
-  <div class="nav-toggle" onclick="toggleNav()">☰</div>
-</div>
- 
+
 
   <!-- Main Header -->
   <header>
@@ -513,24 +509,7 @@
   display: none;
 }
 
-/* Show only on mobile view (screen width 768px or less) */
-@media (max-width: 768px) {
-  .mobile-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-  }
 
-  .logo {
-    height: 40px; /* adjust as needed */
-  }
-
-  .nav-toggle {
-    font-size: 24px;
-    cursor: pointer;
-  }
-}
   /* Loader styles */
 #loader {
   position: fixed;
@@ -849,7 +828,7 @@ nav ul li a:hover::after {
   animation: fadeDown 1s ease-out forwards;
   animation-delay: 0.3s;
 }
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
   .topbar {
     display: none;
   }
@@ -875,30 +854,51 @@ nav ul li a:hover::after {
   nav ul.nav-links {
     display: none;
     flex-direction: column;
-    width: 100%;
-    background: white;
+    width: 100%; /* Corrected width for mobile */
+    background: rgba(255, 255, 255, 0.95); /* Clean light transparent background */
     margin-top: 10px;
     border-top: 1px solid #eee;
-    padding-top: 10px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   }
 
   nav ul.nav-links.show {
     display: flex;
   }
 
+  nav ul.nav-links li a {
+    color: #1d1e4c; /* Text color */
+    padding: 12px 0;
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  nav ul.nav-links li a:hover,
+  nav ul.nav-links li a.active {
+    color: #2563eb; /* Active text color */
+    background: rgba(37, 99, 235, 0.1); /* Optional: light blue background on active/hover */
+    border-radius: 6px;
+  }
+
   .nav-toggle {
     display: block;
     cursor: pointer;
     font-size: 26px;
-    color: #333;
+    color: #1d1e4c;
   }
 
   .login-btn {
     margin-top: 15px;
     width: 100%;
     text-align: center;
+    font-size: 16px;
   }
 }
+
 
   /* Responsive Mobile Styles */
 @media (max-width: 1024px) {
@@ -1039,6 +1039,62 @@ nav ul li a:hover::after {
     .card-content a:hover {
       opacity: 0.8;
     }
+    @media (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    height: auto;
+    margin-left: 0;
+  }
+
+  .card img {
+    height: 250px;
+    object-fit: cover;
+  }
+
+  .card-content {
+    top: 20px;
+    left: 20px;
+  }
+
+  .card-content h2 {
+    font-size: 24px;
+  }
+
+  .card-content p {
+    font-size: 14px;
+    max-width: 100%;
+  }
+
+  .card-content a {
+    font-size: 14px;
+  }
+}
+@media (max-width: 480px) {
+  .card-content h2 {
+    font-size: 20px;
+  }
+
+  .card-content p {
+    font-size: 13px;
+  }
+
+  .card-content {
+    top: 15px;
+    left: 15px;
+  }
+
+  .card-content a {
+    font-size: 13px;
+  }
+}
+
     .section {
       padding: 50px 20px 60px;
       text-align: center;
@@ -1177,90 +1233,6 @@ nav ul li a:hover::after {
     }
     
     
-    @media (max-width: 768px) {
-  /* Wrapper for cards */
-  .wrapper {
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
-
-  .card {
-    width: 90%;
-    height: auto;
-    margin: 20px 0;
-  }
-
-  .card img {
-    height: 250px;
-  }
-
-  .card-content {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-  }
-
-  .card-content h2 {
-    font-size: 24px;
-  }
-
-  .card-content p {
-    font-size: 16px;
-    max-width: 90%;
-  }
-
-  .card-content a {
-    font-size: 14px;
-  }
-
-  /* Section */
-  .section {
-    padding: 40px 15px;
-  }
-
-  .section h1 {
-    font-size: 28px;
-    margin-bottom: 40px;
-  }
-
-  .contact-info {
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .divider {
-    display: none;
-  }
-
-  /* Solutions */
-  .solutions {
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .solution-item {
-    max-width: 100%;
-    padding: 10px;
-  }
-
-  .solution-item img {
-    width: 50px;
-    margin-bottom: 15px;
-  }
-
-  .solution-title {
-    font-size: 18px;
-  }
-
-  .solution-text {
-    font-size: 14px;
-  }
-
-  .read-more {
-    font-size: 13px;
-  }
-}
 
     /*team*/
     @keyframes rotateImage {
@@ -1380,6 +1352,75 @@ nav ul li a:hover::after {
     .social-icons .tw { background: #55acee; }
     .social-icons .gp { background: #dd4b39; }
     .social-icons .in { background: #0077b5; }
+
+    @media (max-width: 768px) {
+  .team-section {
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+  }
+
+  .team-text {
+    margin: 0 0 30px 0;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .team-text h2 {
+    font-size: 22px;
+  }
+
+  .team-text p {
+    font-size: 14px;
+  }
+
+  .nav-buttons {
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .carousel-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .carousel-wrapper::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+  }
+
+  .carousel {
+    width: max-content;
+    gap: 15px;
+  }
+
+  .member-card {
+    width: 240px;
+    margin: 0;
+    scroll-snap-align: start;
+  }
+
+  .carousel-wrapper {
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    display: flex;
+  }
+
+  .member-info h3 {
+    font-size: 16px;
+  }
+
+  .member-info p {
+    font-size: 13px;
+  }
+
+  .social-icons a {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+}
+
     /*pricing*/
     h1 {
   font-size: 32px;
@@ -1747,7 +1788,7 @@ h1:hover {
     }
 
     button {
-      background-color: #65649F;
+      background-color: #2563eb;
       color: white;
       padding: 14px 30px;
       font-size: 1rem;
@@ -1762,18 +1803,9 @@ h1:hover {
       background-color: #1d4ed8;
     }
 
-    @media (max-width: 768px) {
-      form {
-        grid-template-columns: 1fr;
-      }
-
-      .full-width,
-      .submit-button {
-        grid-column: 1 / 2;
-      }
-    }
+   
     .info-map-section {
-  
+  margin-top: 60px;
   padding: 20px;
   background-color: #f9f9ff;
 }
@@ -1794,7 +1826,7 @@ h1:hover {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: 0.3s ease;
-  border-bottom: 4px solid #65649F;
+  border-bottom: 4px solid #2563eb;
 }
 
 .info-box:hover {
@@ -1816,6 +1848,66 @@ h1:hover {
 .info-box p {
   font-size: 1rem;
   color: #444;
+}
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 30px 15px;
+  }
+
+  .contact-section h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .contact-section p {
+    font-size: 0.95rem;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  form {
+    grid-template-columns: 1fr;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .full-width {
+    grid-column: 1 / 2;
+  }
+
+  .submit-button {
+    grid-column: 1 / 2;
+    justify-content: center;
+  }
+
+  .info-map-section {
+    padding: 20px 10px;
+  }
+
+  .info-boxes {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .info-box {
+    width: 100%;
+    max-width: 350px;
+    padding: 20px;
+  }
+
+  .info-box img {
+    width: 50px;
+  }
+
+  .info-box h4 {
+    font-size: 0.95rem;
+  }
+
+  .info-box p {
+    font-size: 0.95rem;
+  }
 }
 
 .map-container iframe {
@@ -2162,11 +2254,6 @@ footer a:hover {
   </style>
   <script>
     
-    function toggleNav() {
-    const navLinks = document.querySelector('.nav-links');
-    navLinks.classList.toggle('show');
-  }
-
     const carousel = document.getElementById('carousel');
     const cardWidth = 280; // including margin
     const totalCards = 6;
