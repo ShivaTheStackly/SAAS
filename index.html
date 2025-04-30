@@ -264,7 +264,7 @@
         <li>Html5 + Css3</li>
         <li>24/7 Customer Support</li>
       </ul>
-      <button class="purchase-btn" id="buy-btn">Purchase Now</button>
+      <button class="purchase-btn" id="buy-starter">Purchase Now</button>
     </div>
 
     <div class="pricing-card">
@@ -279,7 +279,7 @@
         <li>Html5 + Css3</li>
         <li>24/7 Customer Support</li>
       </ul>
-      <button class="purchase-btn" id="buy-btn">Purchase Now</button>
+      <button class="purchase-btn" id="buy-premium">Purchase Now</button>
     </div>
 
     <div class="pricing-card">
@@ -294,7 +294,7 @@
         <li>Html5 + Css3</li>
         <li>24/7 Customer Support</li>
       </ul>
-      <button class="purchase-btn" id="buy-btn">Purchase Now</button>
+      <button class="purchase-btn" id="buy-professional">Purchase Now</button>
     </div>
   </div>
   <section style="padding: 60px 20px; text-align: center;">
@@ -2473,8 +2473,16 @@ const contactInfo = document.querySelectorAll('.contact-info div');
 contactInfo.forEach(info => {
   observer.observe(info); // Observe each contact-info div
 });
-document.getElementById("buy-btn").onclick = function () {
-    window.location.href = "purchase.html";
+document.getElementById("buy-starter").onclick = function () {
+    window.location.href = "purchase.html?plan=starter";
+  };
+
+  document.getElementById("buy-premium").onclick = function () {
+    window.location.href = "purchase.html?plan=premium";
+  };
+
+  document.getElementById("buy-professional").onclick = function () {
+    window.location.href = "purchase.html?plan=professional";
   };
 </script>
 
